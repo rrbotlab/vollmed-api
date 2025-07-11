@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/hello")
-public class HelloController {
+@RequestMapping("status")
+public class StatusController {
 
     @GetMapping
     public ResponseEntity olaMundo(){
-        return ResponseEntity.ok(new DadosMensagem("/hello controller"));
+        return ResponseEntity.ok(new DadosMensagem("online"));
     }
 }
